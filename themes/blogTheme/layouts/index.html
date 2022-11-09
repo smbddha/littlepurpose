@@ -1,5 +1,12 @@
 {{ define "main" }}
-<div id="home-jumbotron" class="jumbotron text-center">
-  <h1 class="title">{{ .Site.Title }}</h1>
+<div class="content-container">
+	<div class="title_container">
+		<text class="large-text">
+			welcome
+		</text>
+	</div>
+	<!-- list to be below -->
+  {{- partial "list.html" . -}}
 </div>
+{{- partial "boids.html" . -}}
 {{ end }}

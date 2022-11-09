@@ -1,9 +1,12 @@
-<div id="nav-border" class="container">
-    <nav id="nav" class="nav justify-content-center">
-        {{ range .Site.Menus.main }}
-	    <a class="nav-link" href="{{ .URL }}">
-		{{ $text := print .Name | safeHTML }}
-		{{ $text }}
+<div id="nav-border" class="nav-container">
+    <nav id="nav" class="nav justify-content-center text-center">
+			{{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+			{{ $menu_item_url := .URL | relLangURL }}
+			{{ $page_url:= $currentPage.RelPermalink | relLangURL }}
+	    <a class="nav-link {{ if eq $menu_item_url $page_url }}active{{ end }}" href="{{ .URL }}">
+				{{ $text := print .Name | safeHTML }}
+				{{ $text }}
 	    </a>
         {{ end }}
     </nav>

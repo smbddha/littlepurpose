@@ -1,21 +1,37 @@
-baseURL = 'http://example.org/'
+baseURL = 'http://littlepurpose.dev/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'blogTheme'
+# sectionPagesMenu = "main"
 
 [menu]
   [[menu.main]]
-    name = "Home"
+    identifier = "home"
+    name = "little purpose"
     pre = "home"
     url = "/"
     weight = 1
   [[menu.main]]
-    name = "Posts"
+    identifier = "project"
+    name = "projects"
     pre = "pen-tool"
-    url = "/posts/"
+    url = "/projects/"
     weight = 2
   [[menu.main]]
-    name = "Tags"
-    pre = "tag"
-    url = "/tags/"
+    identifier = "blog"
+    name = "blog"
+    pre = "blog"
+    url = "/posts/"
     weight = 3
+  [[menu.main]]
+    identifier = "about"
+    name = "about"
+    pre = "about"
+    url = "/about/"
+    weight = 4
+  [[menu.main]]
+    identifier = "contact"
+    name = "contact"
+    pre = "contact"
+    url = "/contact/"
+    weight = 5
