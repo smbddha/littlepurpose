@@ -145,7 +145,7 @@ a.nav-link {
 /* ----- CARDS ----- */
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 22rem);
+    grid-template-columns: repeat(auto-fill, 600px);
     gap: 1.5rem;
     justify-content: start;
 }
@@ -157,7 +157,9 @@ a.nav-link {
 
 .card_item {
     border: 2px solid var(--text-color);
-    max-width: 22rem;
+    /* max-width: 22rem; */
+    /* width: 600px; */
+    width: 100%;
 }
 
 .card_top {
