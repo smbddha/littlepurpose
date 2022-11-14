@@ -5,4 +5,4 @@ draft: false
 type: about
 ---
 
-Hello, it's me.
+Hi, I'm Sam Laing. I'm a web developer and creative coder living in Brooklyn, NY. 

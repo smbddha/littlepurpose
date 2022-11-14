@@ -43,12 +43,18 @@ body.dark-mode {
     /* color: #ffffff; */
 }
 
+img {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+}
+
 .text-center {
     text-align: center;
 }
 
 .small-text {
-    font-size: 0.6em;
+    font-size: 0.8em;
 }
 
 .large-text {
@@ -66,7 +72,8 @@ body.dark-mode {
     padding-top: 8rem;
     padding-left: 0.6rem;
     /* max-width: 1000px; */
-    max-width: 72rem;
+    /* max-width: 72rem; */
+    max-width: 90%;
 }
 
 .content-container {
@@ -85,6 +92,7 @@ body.dark-mode {
 
 .footer {
     flex-shrink: 0;
+    min-height: 2rem;
   /* height: 50px; */
   /* margin-top: -50px; */
   /* font-size: 0.8em; */
@@ -101,7 +109,7 @@ body.dark-mode {
 /*     content: "☽"︎ */
 /* } */
 
-a.nav-link {
+.nav-container > a.nav-link {
     all: unset;
     cursor: pointer;
 }
@@ -141,6 +149,47 @@ a.nav-link {
     content: "☉\00a0";
 }
 
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex1 {
+    flex: 1;
+}
+
+.message {
+    max-width: 100%;
+    /* min-height: 16rem; */
+    height: 16rem;
+    margin-bottom: 1.4rem;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-row {
+    justify-content: space-between;
+    margin-bottom: 1.4rem;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box; 
+}
+
+.contact-form {
+    width: 100%;
+}
 
 /* ----- CARDS ----- */
 .cards {
@@ -152,29 +201,48 @@ a.nav-link {
 
 .projects_title {
     /* transform: rotate(-90deg); */
-    margin-bottom: 2rem;
+    margin-bottom: 1.6rem;
 }
 
 .card_item {
     border: 2px solid var(--text-color);
+    max-height: 30rem;
     /* max-width: 22rem; */
     /* width: 600px; */
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .card_top {
     background: gray;
+    flex: 1;
+    height: 18rem;
+    width: 100%;
 }
 
 .card_bottom {
-    height: 100%;
-    padding: 1rem;
+    margin: 0.6rem;
+    /* margin-bottom: 0.2rem; */
+    flex: 1;
+}
+.card_bottom > h3 {
+    margin: 0rem;
 }
 
-.card_top {
-    width: 100%;
-    height: 14rem;
-    background: #111;
+/* .card_top { */
+/*     width: 100%; */
+/*     height: 16rem; */
+/*     background: #111; */
+/* } */
+
+.icon-row {
+    text-align: right;
+}
+
+.feather {
+    height: 20px;
+    width: 20px;
 }
 
 /* ----- BOIDS ----- */
@@ -283,8 +351,7 @@ ul li {
     position: absolute;
     top: 0.5rem;
     right: 1rem;
-
-    font-size: 1.2rem;
+font-size: 1.2rem;
 }
 
 .toggle-option {
@@ -298,3 +365,67 @@ ul li {
 .selected::before {
     content: "→ "
 }
+
+/* ----- ABOUT PAGE ----- */
+.center-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    max-width: 38rem;
+}
+
+.about-content {
+    
+}
+
+.about-avatar {
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    background: #b3b3b3;
+    position: relative;
+
+    margin-bottom: 10rem;
+}
+
+.face {
+    /* margin: auto; */
+    /* position: absolute; */
+    /* left: 50%; */
+    font-size: 3rem;
+}
+
+#left-eye {
+    position: absolute;
+    top: 140px;
+    left: 110px;
+}
+#right-eye {
+    position: absolute;
+    top: 140px;
+    right: 110px;
+}
+#right-ear {
+    position: absolute;
+    top: 150px;
+    right: 60px;
+}
+#left-ear {
+    position: absolute;
+    top: 150px;
+    left: 60px;
+}
+#nose {
+    position: absolute;
+    bottom: 140px;
+    left: 180px;
+}
+#mouth {
+    position: absolute;
+    bottom: 70px;
+    left: 180px;
+}
+
+

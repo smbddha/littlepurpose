@@ -7,18 +7,38 @@
 	<div class="card_item">
 		<div class="card_top">
 			<!-- image here -->
+			{{ $img := "/default-image.jpg" }}
+			{{ if (isset .Params "image" )}}
+				{{ $img = .Params.image }}
+			{{ end }}
+			<img src="{{ $img }}">
 		</div>
-		<div class="card_bottom">
-			<div>
-				<h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+		<div class="card_bottom flex-column">
+				<h3><a class="title" href="{{ .Params.link }}">{{ .Title }}</a></h3>
 				<!-- {{ partial "metadata.html" . }} -->
-				<a class="summary" href="{{ .RelPermalink }}">
-					<p>{{ .Summary }}</p>
-				</a>
+				<div class="flex1">
+					<a class="summary" href="{{ .Params.link }}">
+						<p>{{ .Summary }}</p>
+					</a>
+				</div>
 
 				<div class="icon-row">
+					{{ if (isset .Params "post") }}
+					<a href="{{ .Params.post }}">
+						{{ partial  "feather.html" "book-open" }}
+					</a>
+					{{ end }}
+					{{ if (isset .Params "github") }}
+					<a href="{{ .Params.github }}">
+						{{ partial  "feather.html" "github" }}
+					</a>
+					{{ end }}
+					{{ if (isset .Params "link") }}
+					<a href="{{ .Params.link }}">
+						{{ partial  "feather.html" "globe" }}
+					</a>
+					{{ end }}
 				</div>
-			</div>
 		</div>	
 	</div>
 {{ end }}

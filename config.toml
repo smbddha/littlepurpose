@@ -4,6 +4,10 @@ title = 'My New Hugo Site'
 theme = 'blogTheme'
 # sectionPagesMenu = "main"
 
+[params]
+	github = "https://github.com/smbddha"	
+	resume = "static/resume.pdf"	
+
 [menu]
   [[menu.main]]
     identifier = "home"

@@ -1,7 +1,31 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-"HALLO"
-{{ partial "metadata.html" . }}
-<br><br>
-{{ .Content }}
+<div class="center-page">
+	<div id="eyes-avatar" class="about-avatar face">
+		<div id="left-ear">👂</div>
+		<div id="right-ear">👂</div>
+		<div id="left-eye">👁</div>
+		<div id="right-eye">👁</div>
+		<div id="nose">👃</div>
+		<div id="mouth">👄</div>
+	</div>
+	<!-- <h1>{{ .Title }}</h1> -->
+	<div class="about-content">
+		<!-- {{ partial "metadata.html" . }} -->
+		<!-- <br><br> -->
+		{{ .Content }}
+
+		<div>
+			<!-- github and resume links -->
+			<a href={{ $.Site.Params.github }}>
+				github
+			</a>
+			-
+			<a href={{ $.Site.Params.resume }}>
+				resume	
+			</a>
+		</div>
+
+	</div>
+</div>
+<script defer language="javascript" type="text/javascript"  src="{{ "/js/eyetracker.js" | urlize | relURL }}"></script>
 {{ end }}
