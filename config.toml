@@ -1,6 +1,6 @@
 baseURL = 'http://littlepurpose.dev/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'little purpose'
 theme = 'blogTheme'
 # sectionPagesMenu = "main"
 

@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="projects_title">
+<div class="projects-title">
 	<text class="large-text rotate90">{{ .Title }}</text>
 </div>
 <div class="cards">
@@ -24,17 +24,17 @@
 
 				<div class="icon-row">
 					{{ if (isset .Params "post") }}
-					<a href="{{ .Params.post }}">
+					<a href="{{ .Params.post }}" title="view post">
 						{{ partial  "feather.html" "book-open" }}
 					</a>
 					{{ end }}
 					{{ if (isset .Params "github") }}
-					<a href="{{ .Params.github }}">
+					<a href="{{ .Params.github }}" title="view repo">
 						{{ partial  "feather.html" "github" }}
 					</a>
 					{{ end }}
 					{{ if (isset .Params "link") }}
-					<a href="{{ .Params.link }}">
+					<a href="{{ .Params.link }}" title="view website">
 						{{ partial  "feather.html" "globe" }}
 					</a>
 					{{ end }}

@@ -1,4 +1,5 @@
-<div id="nav-border" class="nav-container">
+<div class="text-center">
+<div id="nav-border" class="nav-container desktop">
     <nav id="nav" class="nav justify-content-center text-center">
 			{{ $currentPage := . }}
       {{ range .Site.Menus.main }}
@@ -10,4 +11,17 @@
 	    </a>
         {{ end }}
     </nav>
+</div>
+
+<div id="nav-border" class="nav-container mobile">
+    <nav id="nav" class="nav justify-content-center text-center">
+			{{ $menu_item_url := .URL | relLangURL }}
+	    <a class="nav-link {{ if .IsHome  }}active{{ end }}" href="{{ .Site.BaseURL }}">
+				<!-- {{ $text := print .Name | safeHTML }}
+						 {{ $text }} -->
+				{{ $text := print .Site.Home.Name | safeHTML }}
+				{{ $text }}
+	    </a>
+    </nav>
+</div>
 </div>
