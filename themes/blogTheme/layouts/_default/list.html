@@ -8,7 +8,7 @@
 	<!-- list to be below -->
 	<ul>
 		{{ range .Pages.ByPublishDate.Reverse  }}
-    <li><a class="title" href="{{ .URL }}">{{ .Name }}</a></li>
+    <li><a class="title" href="{{ .RelPermalink }}">{{ .Name }}</a></li>
 		{{ end }}
 	</ul>
 </div>
