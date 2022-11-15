@@ -8,4 +8,4 @@ github: https://github.com/smbddha/area-game
 <!-- post: -->
 ---
 
-A small game whe you try to match the areas of two sets of shapes.
+A small game where you try to match the areas of two sets of shapes.
