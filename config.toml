@@ -24,12 +24,13 @@ pygmentsCodeFences=true
     pre = "pen-tool"
     url = "/projects/"
     weight = 2
-  [[menu.main]]
-    identifier = "blog"
-    name = "blog"
-    pre = "blog"
-    url = "/posts/"
-    weight = 3
+  # uncomment when you write the first post
+  # [[menu.main]s]
+  #   identifier = "blog"
+  #   name = "blog"
+  #   pre = "blog"
+  #   url = "/posts/"
+  #   weight = 3
   [[menu.main]]
     identifier = "about"
     name = "about"

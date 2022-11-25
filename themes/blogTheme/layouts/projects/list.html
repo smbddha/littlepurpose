@@ -4,13 +4,20 @@
 </div>
 <div class="cards">
 {{ range .Pages.ByPublishDate.Reverse }}
+{{ $main_url := "/" | relLangURL }}
+	{{ if (isset .Params "github") }}
+			{{ $main_url = .Params.github }}
+	{{end}}
+	{{ if (isset .Params "link") }}
+			{{ $main_url = .Params.link }}
+	{{end}}
 	<div class="card_item">
 		
 		<div class="card_bottom flex-column">
-				<h3><a class="title" href="{{ .Params.link }}">{{ .Title }}</a></h3>
+				<h3><a class="title" href="{{ $main_url  }}">{{ .Title }}</a></h3>
 				<!-- {{ partial "metadata.html" . }} -->
 				<div class="flex1">
-					<a class="summary" href="{{ .Params.link }}">
+					<a class="summary" href="{{ $main_url }}">
 						<p>{{ .Summary }}</p>
 					</a>
 				</div>

@@ -43,6 +43,16 @@ html, body {
   color: var(--text-color);
 }
 
+h2 {
+    margin-bottom: 0.1rem;
+}
+
+p {
+    margin-top: 0.4rem;
+    margin-bottom: 1.6rem;
+}
+
+
 p a {
     text-decoration: underline;
 }
@@ -453,7 +463,9 @@ font-size: 1.2rem;
     /* text-align: left; */
     align-items: flex-start;
     margin: auto;
-    max-width: 44rem;   
+    max-width: 40rem;   
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .about-content {
