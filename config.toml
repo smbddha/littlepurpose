@@ -2,11 +2,14 @@ baseURL = 'http://littlepurpose.dev/'
 languageCode = 'en-us'
 title = 'little purpose'
 theme = 'blogTheme'
+pygmentsUseClasses=true
+pygmentsCodeFences=true
+
 # sectionPagesMenu = "main"
 
 [params]
 	github = "https://github.com/smbddha"	
-	resume = "static/resume.pdf"	
+	resume = "/resume.pdf"	
 
 [menu]
   [[menu.main]]

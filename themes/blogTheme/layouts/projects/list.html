@@ -5,14 +5,7 @@
 <div class="cards">
 {{ range .Pages.ByPublishDate.Reverse }}
 	<div class="card_item">
-		<div class="card_top">
-			<!-- image here -->
-			{{ $img := "/default-image.jpg" }}
-			{{ if (isset .Params "image" )}}
-				{{ $img = .Params.image }}
-			{{ end }}
-			<img src="{{ $img }}">
-		</div>
+		
 		<div class="card_bottom flex-column">
 				<h3><a class="title" href="{{ .Params.link }}">{{ .Title }}</a></h3>
 				<!-- {{ partial "metadata.html" . }} -->
