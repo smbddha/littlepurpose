@@ -7,5 +7,5 @@
 <script language="javascript" type="text/javascript"  src="{{ "/js/feather.min.js" | urlize | relURL }}"></script>
     {{ $title := print .Site.Title " | " .Title }}
     {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
-    <title>{{ $title }} WHAT</title>
+    <title>{{ $title }}</title>
 </head>
