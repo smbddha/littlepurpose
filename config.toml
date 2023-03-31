@@ -2,6 +2,7 @@ baseURL = 'http://littlepurpose.dev/'
 languageCode = 'en-us'
 title = 'little purpose'
 theme = 'blogTheme'
+googleAnalytics = 'G-G0W02YSMQL'
 pygmentsUseClasses=true
 pygmentsCodeFences=true
 
