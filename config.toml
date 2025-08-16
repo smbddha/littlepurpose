@@ -1,4 +1,4 @@
-baseURL = 'http://littlepurpose.dev/'
+baseURL = 'https://smbddha.github.io/'
 languageCode = 'en-us'
 title = 'little purpose'
 theme = 'blogTheme'
